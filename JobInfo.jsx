@@ -1,4 +1,4 @@
-import Duties from './src/duties';
+import Duties from './src/Duties';
 
 const JobInfo = (props) => {
   const { company, dates, duties, title } = props.jobs[0];
