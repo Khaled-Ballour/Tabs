@@ -6,7 +6,7 @@ const url = 'https://course-api.com/react-tabs-project';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [jobs, setJpbs] = useState([]);
+  const [jobs, setJobs] = useState([]);
   const [currentItem, setCurrentItem] = useState(0);
 
   const getJobs = async () => {
@@ -14,7 +14,7 @@ const App = () => {
       const res = await fetch(url);
       if (!res.ok) throw new Error('Not Found');
       const newJobs = await res.json();
-      setJpbs(newJobs);
+      setJobs(newJobs);
       setIsLoading(false);
     } catch (err) {
       console.log(err);
